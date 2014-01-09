@@ -26,8 +26,8 @@ public class PDBUrlBuilder {
      * ID can not be read.
      */
     public static URL getFirstPdbUrlFromUniprotEntry(String uniprotId) throws IOException {
-        System.setProperty("http.proxyHost", "cache.univ-poitiers.fr");
-        System.setProperty("http.proxyPort", "3128");
+//        System.setProperty("http.proxyHost", "cache.univ-poitiers.fr");
+//        System.setProperty("http.proxyPort", "3128");
 
         URL url = new URL("http://www.uniprot.org/uniprot/" + uniprotId + ".txt");
         BufferedReader in = new BufferedReader(new InputStreamReader(url.openStream()));
